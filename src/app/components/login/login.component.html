@@ -1,0 +1,75 @@
+<div class="app">
+  <p>⭐</p>
+  <h5>⭐</h5>
+  <h6>⭐</h6>
+  <h4>⭐</h4>
+  <h3>⭐</h3>
+
+  <div class="cont">
+    <div class="rw">
+      <div class="cl">
+        <div class="cd">
+          <div class="tc">
+            <h1 class="h">⭐Login⭐</h1>
+            <h2 class="h">Please enter email & password</h2>
+          </div>
+          <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="row mb-3">
+              <label for="inputEmail3" class="col-sm-2 col-form-label"
+                >Email</label
+              >
+              <div class="col-sm-10">
+                <input
+                  formControlName="email"
+                  type="email"
+                  class="form-control"
+                  id="inputEmail3"
+                />
+                <br /><span
+                  class="text-danger"
+                  *ngIf="
+                    loginForm.controls['email'].dirty &&
+                    loginForm.hasError('required', 'email')
+                  "
+                  >Email Id is required</span
+                >
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputPassword3" class="col-sm-2 col-form-label"
+                >Password</label
+              >
+              <div class="col-sm-10">
+                <input
+                  formControlName="password"
+                  type="password"
+                  class="form-control"
+                  id="inputPassword3"
+                />
+                <br /><span
+                  class="text-danger"
+                  *ngIf="
+                    loginForm.controls['password'].dirty &&
+                    loginForm.hasError('required', 'password')
+                  "
+                  >Password is required</span
+                >
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              [disabled]="!loginForm.valid"
+              class="btn btn-primary"
+            >
+              Login
+            </button>
+          </form>
+          <a routerLink="/register">
+            <h1 class="newuser">New user? Click to sign up</h1>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,93 @@
+* {
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.app {
+  background: linear-gradient(
+    45deg,
+    rgb(21, 50, 75),
+    rgb(49, 5, 99),
+    rgb(30, 31, 122)
+  );
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.cont {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  box-sizing: border-box;
+}
+.cl {
+  margin-top: 50%;
+  width: 350px;
+  border: 3px solid black;
+  height: 400px;
+  background: linear-gradient(45deg, rgb(21, 50, 75), rgb(49, 5, 99));
+  border-radius: 20px;
+  padding: 10px;
+}
+.h {
+  text-align: center;
+}
+h1 {
+  font-size: 40px;
+}
+
+input {
+  width: 98%;
+  height: 30px;
+  background: linear-gradient(45deg, rgb(99, 6, 250), rgb(1, 25, 158));
+}
+label {
+  font-size: 24px;
+  color: gold;
+}
+
+button {
+  position: relative;
+  left: 35%;
+  font-size: 40px;
+  margin-top: 20px;
+  background: linear-gradient(45deg, rgb(99, 6, 250), rgb(1, 25, 158));
+  border-radius: 5px;
+}
+
+h3,
+h4,
+h5,
+h6,
+p {
+  position: absolute;
+}
+h3 {
+  left: 1200px;
+  font-size: 100px;
+  bottom: 70%;
+}
+h4 {
+  left: 500px;
+  top: 580px;
+  font-size: 40px;
+}
+h5 {
+  left: 1000px;
+  top: 600px;
+  font-size: 80px;
+}
+h6 {
+  left: 1200px;
+  top: 300px;
+  font-size: 40px;
+}
+p {
+  left: 500px;
+
+  font-size: 60px;
+}
+.newuser {
+  font-size: 18px;
+  margin-top: 10px;
+}

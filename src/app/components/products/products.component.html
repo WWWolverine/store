@@ -1,0 +1,51 @@
+<div class="card-top">
+  <div class="container d-flex">
+    <div class="foritem">
+      <div class="item">
+        <a (click)="filter('')">
+          <i class="fa-solid fa-store"></i>
+          <h6>All products</h6>
+        </a>
+      </div>
+      <div class="item">
+        <a (click)="filter('electronics')">
+          <i class="fa-solid fa-bolt"></i>
+          <h6>Electronics</h6>
+        </a>
+      </div>
+      <div class="item">
+        <a (click)="filter('fashion')">
+          <i class="fa-solid fa-hat-cowboy"></i>
+          <h6>Clothigs</h6>
+        </a>
+      </div>
+      <div class="item">
+        <a (click)="filter('jewelery')">
+          <i class="fa-solid fa-gem"></i>
+          <h6>Jewerly</h6>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="center">
+  <div class="row">
+    <ng-container
+      *ngFor="let item of filterCategory | filter: searchKey:'title'"
+    >
+      <div class="card">
+        <img src="{{ item.image }}" alt="" />
+        <h5>{{ item.title }}</h5>
+        <p class="scroll">{{ item.description }}</p>
+
+        <h5>
+          <strong>Price :{{ item.price | currency }}</strong>
+        </h5>
+        <button class="btn btn-success" (click)="addtocart(item)">
+          Add to cart
+        </button>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="container center">
+  <div class="div">
+    <google-pay-button
+      environment="TEST"
+      buttonColor="default"
+      buttonType="buy"
+      buttonLocale="en"
+      [paymentRequest]="paymentRequest"
+      (loadpaymentdata)="onLoadPaymentData($event)"
+      (error)="onError($event)"
+      [paymentAuthorizedCallback]="onPaymentDataAuthorized"
+    >
+    </google-pay-button>
+    <google-pay-button
+      environment="TEST"
+      buttonColor="default"
+      buttonType="buy"
+    ></google-pay-button>
+  </div>
+</div>
